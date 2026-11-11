@@ -287,6 +287,53 @@ body.opened #btnMusic{display:flex}
 .rv-arch{transform:translateY(30px) scale(.94)}
 .rv.in.rv-up,.rv.in.rv-zoom,.rv.in.rv-left,.rv.in.rv-right,.rv.in.rv-flip,.rv.in.rv-drop,.rv.in.rv-pop,.rv.in.rv-arch{transform:none}
 
+/* ===== BESPOKE "KARTU POS DARI PARIS" (2026-11-12) ===== */
+.awning{position:absolute;top:0;left:-2%;width:104%;height:96px;z-index:7;pointer-events:none;transform-origin:50% 0;
+ background:repeating-linear-gradient(90deg,#b04a72 0 26px,#fff6ec 26px 52px);
+ border-bottom:6px solid #8c3358;box-shadow:0 14px 24px rgba(46,36,66,.35);
+ animation:awningIn 1.4s 2.2s cubic-bezier(.22,.8,.3,1) both,awningSway 9s ease-in-out 3.6s infinite}
+.awning::after{content:"";position:absolute;left:0;right:0;bottom:-16px;height:16px;background:radial-gradient(circle at 13px -3px,#fff6ec 12px,transparent 13px) 0 0/52px 16px repeat-x,radial-gradient(circle at 39px -3px,#b04a72 12px,transparent 13px) 0 0/52px 16px repeat-x}
+@keyframes awningIn{from{transform:translateY(-100px)}to{transform:translateY(0)}}
+@keyframes awningSway{0%,100%{transform:rotate(.55deg)}25%{transform:rotate(-.2deg)}50%{transform:rotate(-.6deg)}75%{transform:rotate(.25deg)}}
+body.opening .awning{animation:awningRoll 1.05s cubic-bezier(.6,0,.8,.4) both}
+@keyframes awningRoll{to{transform:scaleY(.07) translateY(-30px);opacity:.4}}
+.sparkle{position:absolute;z-index:6;color:#ffeeb0;font-size:15px;pointer-events:none;text-shadow:0 0 12px #ffd76e;opacity:0;animation:sparkCycle 7s ease-in-out infinite}
+@keyframes sparkCycle{0%,72%,100%{opacity:0;transform:scale(.5) rotate(0deg)}80%{opacity:1;transform:scale(1.25) rotate(35deg)}88%{opacity:.25;transform:scale(.8) rotate(60deg)}94%{opacity:1;transform:scale(1.1) rotate(80deg)}}
+.boat-cross{position:absolute;left:0;bottom:19%;width:34%;z-index:5;pointer-events:none;animation:boatCross 46s cubic-bezier(.37,0,.63,1) infinite}
+@keyframes boatCross{0%{transform:translateX(-120%);opacity:0}4%{opacity:.95}50%{transform:translateX(105%)}96%{opacity:.95}100%{transform:translateX(215%);opacity:0}}
+.boat-bob{display:block;width:100%;animation:boatBob 3.6s ease-in-out infinite alternate}
+@keyframes boatBob{from{transform:translateY(0) rotate(-.8deg)}to{transform:translateY(-5px) rotate(.9deg)}}
+.cafe-glow{animation:cafeGlow 3.2s ease-in-out infinite alternate}
+@keyframes cafeGlow{from{filter:brightness(1)}to{filter:brightness(1.14) drop-shadow(0 0 14px rgba(255,214,120,.55))}}
+.pc-stamp{position:absolute;top:12px;right:12px;width:46px;height:54px;background:#fffdf6;padding:3px;border-radius:3px;box-shadow:0 4px 10px rgba(90,64,140,.28);transform:rotate(5deg);z-index:3;animation:stampBob 4.6s ease-in-out infinite alternate}
+.pc-stamp img{width:100%;height:100%;object-fit:contain}
+@keyframes stampBob{from{transform:rotate(3deg) translateY(0)}to{transform:rotate(6deg) translateY(-3px)}}
+.pc-mark{position:absolute;top:16px;right:64px;width:74px;height:74px;border:2px solid rgba(92,110,160,.75);border-radius:50%;color:rgba(70,88,140,.9);font-size:8.2px;font-weight:800;letter-spacing:.08em;text-align:center;display:flex;align-items:center;justify-content:center;padding:8px;transform:rotate(-13deg);z-index:3;pointer-events:none;background:radial-gradient(circle,transparent 58%,rgba(92,110,160,.14) 60%,transparent 64%);box-shadow:inset 0 0 0 3px rgba(255,253,246,.4),inset 0 0 0 5px rgba(92,110,160,.35);animation:markPulse 3.8s ease-in-out infinite alternate;line-height:1.5}
+@keyframes markPulse{from{opacity:.72;transform:rotate(-13deg) scale(1)}to{opacity:1;transform:rotate(-11deg) scale(1.05)}}
+.pc-lines{position:absolute;right:16px;bottom:16px;width:104px;height:44px;pointer-events:none;opacity:.5;background:repeating-linear-gradient(180deg,rgba(109,90,128,.55) 0 1px,transparent 1px 14px)}
+.gare{width:172px;height:172px;margin:0 auto 16px;border-radius:50%;background:radial-gradient(circle,#fffdf4 62%,#f3e3bb 100%);border:7px solid #b08d4f;box-shadow:0 16px 34px rgba(60,40,90,.3),inset 0 0 0 4px rgba(125,95,39,.35);position:relative;animation:gareBreath 7s ease-in-out infinite alternate}
+@keyframes gareBreath{from{transform:scale(1)}to{transform:scale(1.022)}}
+.gare svg{width:100%;height:100%}
+.hand-h{transform-box:view-box;transform-origin:86px 86px;animation:handSpin 240s linear infinite}
+.hand-m{transform-box:view-box;transform-origin:86px 86px;animation:handSpin 30s linear infinite}
+@keyframes handSpin{to{transform:rotate(360deg)}}
+.cd-box{border-radius:8px;position:relative}
+.cd-box::after{content:"";position:absolute;left:6px;right:6px;top:50%;height:1px;background:rgba(238,217,164,.4)}
+.gal-slide{background:#fffdf6;padding:10px 10px 2px;border-radius:7px;border:1px solid rgba(176,141,79,.5);box-shadow:0 16px 32px rgba(90,64,140,.24);position:relative}
+.gal-slide:nth-child(odd){transform:rotate(-2.1deg)}
+.gal-slide:nth-child(even){transform:rotate(1.7deg)}
+.gal-slide .arch{border-radius:5px;border-width:1px;padding:0;background:none;box-shadow:none}
+.gal-slide .arch img{border-radius:4px}
+.gal-slide.frameless .arch{border-radius:5px}
+.gal-slide.wide{flex-basis:88%}
+.gal-slide.wide .arch{height:224px}
+.stamp-mini{position:absolute;top:7px;right:7px;width:34px;z-index:4;transform:rotate(6deg);box-shadow:0 3px 8px rgba(90,64,140,.3);animation:stampBob 5s ease-in-out infinite alternate}
+.mark-mini{position:absolute;top:26px;right:38px;width:44px;height:44px;border:1.6px solid rgba(92,110,160,.65);border-radius:50%;color:rgba(70,88,140,.85);font-size:5.6px;font-weight:800;text-align:center;display:flex;align-items:center;justify-content:center;transform:rotate(-12deg);z-index:4;pointer-events:none;animation:markPulse 4.2s ease-in-out infinite alternate;line-height:1.4;padding:4px}
+.hand{display:block;font-family:'Great Vibes',cursive;font-size:21px;color:var(--rose-d);margin-top:1px}
+.tl:before{left:-1px;width:24px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 100' preserveAspectRatio='none'%3E%3Cpath d='M12 0 Q26 25 12 50 Q-2 75 12 100' fill='none' stroke='%237fa3cc' stroke-width='5'/%3E%3C/svg%3E") 0 0/24px 100px repeat-y;opacity:.85;margin-left:0}
+.tl-dot{border-radius:45% 45% 50% 50%/70% 70% 34% 34%}
+.leaf-drift{position:absolute;pointer-events:none;opacity:0;animation:petalDrift var(--pd,20s) linear infinite;animation-delay:var(--pdl,0s)}
+
 @media (prefers-reduced-motion: reduce){
   *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
   .rv{opacity:1;transform:none}
@@ -324,8 +371,12 @@ body.opened #btnMusic{display:flex}
         <img class="petal" src="assets/undangya/paris-romansa/petal.webp" alt="" style="width:15px;--pt:70%;--pd:17s;--pdl:-8s;--y25:20px;--y50:36px;--y75:52px;--ye:66px">
         <img class="petal" src="assets/undangya/paris-romansa/petal.webp" alt="" style="width:24px;--pt:8%;--pd:25s;--pdl:-19s;--y25:18px;--y50:32px;--y75:48px;--ye:60px">
       </div>
+      <span class="sparkle" style="left:44%;top:17%">✦</span><span class="sparkle" style="left:54%;top:21%;animation-delay:.5s">✦</span><span class="sparkle" style="left:49%;top:27%;animation-delay:1s;font-size:11px">✦</span><span class="sparkle" style="left:39%;top:24%;animation-delay:1.4s;font-size:11px">✦</span><span class="sparkle" style="left:58%;top:15%;animation-delay:.8s">✦</span><span class="sparkle" style="left:47%;top:12%;animation-delay:1.8s;font-size:12px">✦</span><span class="sparkle" style="left:52%;top:31%;animation-delay:.3s;font-size:10px">✦</span><span class="sparkle" style="left:36%;top:19%;animation-delay:2.1s;font-size:10px">✦</span>
+      <div class="boat-cross" aria-hidden="true"><img class="boat-bob" src="assets/undangya/paris-romansa/decor-boat.webp" alt=""></div>
+      <img class="lyr cafe-glow" style="left:1%;bottom:5.5%;width:33%;z-index:7" src="assets/undangya/paris-romansa/decor-cafe-table.webp" alt="">
       <div class="cover-shade"></div>
     </div>
+    <div class="awning" aria-hidden="true"></div>
     <div class="cover-ui">
       <div class="cover-kicker">THE WEDDING OF</div>
       <div class="cover-bonjour">Bonjour, avec amour…</div>
@@ -343,6 +394,7 @@ body.opened #btnMusic{display:flex}
 
     <!-- ================= PEMBUKA ================= -->
     <section id="sambutan">
+      <img class="decor-side sway-b" style="--sd:9.8s;right:-30px;top:120px;width:78px" src="assets/undangya/paris-romansa/decor-lavender.webp" alt="" loading="lazy" decoding="async">
       <div class="bg-tint">
         <div class="sec-head rv rv-drop">
           <img class="sec-icon" src="assets/undangya/paris-romansa/icon-eiffel.webp" alt="">
@@ -350,7 +402,7 @@ body.opened #btnMusic{display:flex}
           <h2 class="sec-title serif">Bonjour, Paris Memanggil</h2>
           <svg class="divider" viewBox="0 0 120 12" aria-hidden="true"><path d="M2 6 H44 M76 6 H118" stroke="#b08d4f" stroke-width="1.4"/><path d="M60 1 L65 6 L60 11 L55 6 Z" fill="none" stroke="#b08d4f" stroke-width="1.4"/><circle cx="49" cy="6" r="1.8" fill="#b04a72"/><circle cx="71" cy="6" r="1.8" fill="#b04a72"/></svg>
         </div>
-        <div class="card rv rv-flip" style="text-align:center">
+        <div class="card rv rv-flip" style="text-align:center"><span class="pc-stamp" aria-hidden="true"><img src="assets/undangya/paris-romansa/icon-croissant.webp" alt=""></span><span class="pc-mark" aria-hidden="true">PARIS · 12 JUIN 2027 · FRANCE</span><span class="pc-lines" aria-hidden="true"></span>
           <p class="corm" style="font-size:19px;line-height:1.75;font-style:italic">“Dan di antara tanda-tanda kebesaran-Nya ialah Dia menciptakan pasangan-pasangan untukmu agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang.”</p>
           <p style="margin-top:12px;font-size:12px;letter-spacing:.24em;color:var(--rose-d);font-weight:700">QS. AR-RUM : 21</p>
           <p style="margin-top:16px;font-size:14px;line-height:1.75;color:#4c3a5e">Seperti sore musim semi di tepi Sungai Seine, dua hati yang dipertemukan kini hendak menulis bab terindahnya. Dengan penuh syukur, kami mengundang Bapak/Ibu/Saudara/i untuk hadir dan memberi doa restu pada hari bahagia kami.</p>
@@ -376,14 +428,14 @@ body.opened #btnMusic{display:flex}
         <p class="sec-sub">Mempelai yang berbahagia</p>
       </div>
       <div class="couple-grid">
-        <div class="person rv rv-left">
+        <div class="person rv rv-left"><span class="pc-stamp" aria-hidden="true"><img src="assets/undangya/paris-romansa/icon-rings.webp" alt=""></span><span class="pc-mark" aria-hidden="true">PARIS · 12 JUIN 2027 · FRANCE</span>
           <div class="arch"><img src="assets/undangya/paris-romansa/bride.webp" alt="Mempelai wanita, Meyzsa Putri Ananda, bergaun pastel di balkon berbunga Paris" loading="lazy" decoding="async"></div>
           <h3>Meyzsa Putri Ananda</h3>
           <div class="gelar">Meyzsa Putri Ananda, S.Pd.</div>
           <p>Putri dari<br><b>Bapak H. Muhammad Ridwan</b><br>&amp; <b>Ibu Hj. Siti Aminah</b></p>
           <a class="ig-btn" href="https://instagram.com/meyzsa.contoh" target="_blank" rel="noopener">@meyzsa.contoh</a>
         </div>
-        <div class="person rv rv-right">
+        <div class="person rv rv-right"><span class="pc-stamp" aria-hidden="true"><img src="assets/undangya/paris-romansa/icon-eiffel.webp" alt=""></span><span class="pc-mark" aria-hidden="true">PARIS · 12 JUIN 2027 · FRANCE</span>
           <div class="arch"><img src="assets/undangya/paris-romansa/groom.webp" alt="Mempelai pria, Ahmad Fahrezzi Pratama, berjas navy di teras kafe Paris" loading="lazy" decoding="async"></div>
           <h3>Ahmad Fahrezzi Pratama</h3>
           <div class="gelar">Ahmad Fahrezzi Pratama, S.T.</div>
@@ -400,6 +452,7 @@ body.opened #btnMusic{display:flex}
 
     <!-- ================= LOVE STORY ================= -->
     <section id="kisah">
+      <div class="boat-cross" style="bottom:auto;top:6px;width:26%" aria-hidden="true"><img class="boat-bob" src="assets/undangya/paris-romansa/decor-boat.webp" alt="" loading="lazy" decoding="async"></div>
       <div class="bg-tint">
         <div class="sec-head rv rv-up">
           <img class="sec-icon" src="assets/undangya/paris-romansa/icon-lock.webp" alt="" loading="lazy" decoding="async">
@@ -457,6 +510,9 @@ body.opened #btnMusic{display:flex}
           <div class="sec-kicker">HITUNG MUNDUR</div>
           <h2 class="sec-title serif">Menuju Hari Bahagia</h2>
         </div>
+        <img class="decor-side cafe-glow" style="right:-14px;top:64px;width:74px" src="assets/undangya/paris-romansa/decor-lamp.webp" alt="" loading="lazy" decoding="async">
+        <div class="gare rv rv-pop" role="img" aria-label="Jam stasiun Gare de Paris"><svg viewBox="0 0 172 172"><circle cx="86" cy="86" r="76" fill="none" stroke="#b08d4f" stroke-width="2"/><circle cx="86" cy="86" r="64" fill="none" stroke="rgba(176,141,79,.4)"/><text x="86" y="22" font-size="13" font-weight="700" fill="#43355a" text-anchor="middle" font-family="Playfair Display,serif">XII</text><text x="118" y="30" font-size="13" font-weight="700" fill="#43355a" text-anchor="middle" font-family="Playfair Display,serif">I</text><text x="144" y="52" font-size="13" font-weight="700" fill="#43355a" text-anchor="middle" font-family="Playfair Display,serif">II</text><text x="154" y="90" font-size="13" font-weight="700" fill="#43355a" text-anchor="middle" font-family="Playfair Display,serif">III</text><text x="144" y="128" font-size="13" font-weight="700" fill="#43355a" text-anchor="middle" font-family="Playfair Display,serif">IV</text><text x="118" y="150" font-size="13" font-weight="700" fill="#43355a" text-anchor="middle" font-family="Playfair Display,serif">V</text><text x="86" y="158" font-size="13" font-weight="700" fill="#43355a" text-anchor="middle" font-family="Playfair Display,serif">VI</text><text x="54" y="150" font-size="13" font-weight="700" fill="#43355a" text-anchor="middle" font-family="Playfair Display,serif">VII</text><text x="28" y="128" font-size="13" font-weight="700" fill="#43355a" text-anchor="middle" font-family="Playfair Display,serif">VIII</text><text x="18" y="90" font-size="13" font-weight="700" fill="#43355a" text-anchor="middle" font-family="Playfair Display,serif">IX</text><text x="28" y="52" font-size="13" font-weight="700" fill="#43355a" text-anchor="middle" font-family="Playfair Display,serif">X</text><text x="54" y="30" font-size="13" font-weight="700" fill="#43355a" text-anchor="middle" font-family="Playfair Display,serif">XI</text><g class="hand-h"><line x1="86" y1="86" x2="86" y2="52" stroke="#43355a" stroke-width="6" stroke-linecap="round"/></g><g class="hand-m"><line x1="86" y1="86" x2="86" y2="34" stroke="#b04a72" stroke-width="4" stroke-linecap="round"/></g><circle cx="86" cy="86" r="7" fill="#b08d4f" stroke="#7d5f27" stroke-width="2"/></svg></div>
+        <p class="demo-note rv rv-up" style="margin-bottom:14px;letter-spacing:.28em;font-weight:700">PAPAN KEBERANGKATAN · GARE DE PARIS</p>
         <div class="countdown rv rv-pop" id="countdown" data-target="2027-06-12T08:00:00+07:00" aria-label="Hitung mundur menuju akad nikah">
           <div class="cd-box"><b id="cdD">0</b><span>Hari</span></div>
           <div class="cd-box"><b id="cdH">0</b><span>Jam</span></div>
@@ -465,7 +521,7 @@ body.opened #btnMusic{display:flex}
         </div>
         <p class="demo-note rv rv-up" style="margin-bottom:26px">Sabtu, 12 Juni 2027 — Jakarta</p>
 
-        <div class="card event rv rv-left">
+        <div class="card event rv rv-left"><span class="pc-stamp" aria-hidden="true"><img src="assets/undangya/paris-romansa/icon-envelope.webp" alt=""></span><span class="pc-mark" aria-hidden="true">PARIS · 12 JUIN 2027 · FRANCE</span>
           <img class="sec-icon" src="assets/undangya/paris-romansa/icon-envelope.webp" alt="" loading="lazy" decoding="async">
           <h3>Akad Nikah</h3>
           <div class="when">Sabtu, 12 Juni 2027 · 08.00 – 10.00 WIB</div>
@@ -474,7 +530,7 @@ body.opened #btnMusic{display:flex}
           <a class="btn btn-alt" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Akad+Nikah+Meyzsa+%26+Fahrezzi&amp;dates=20270612T010000Z%2F20270612T030000Z&amp;details=Akad+Nikah+Meyzsa+Putri+Ananda+%26+Ahmad+Fahrezzi+Pratama&amp;location=Masjid+Agung+Al-Azhar%2C+Kebayoran+Baru%2C+Jakarta+Selatan" target="_blank" rel="noopener">SIMPAN KE KALENDER</a>
           <button class="btn btn-alt" type="button" data-ics data-file="akad-meyzsa-fahrezzi" data-title="Akad Nikah Meyzsa &amp; Fahrezzi" data-start="20270612T010000Z" data-end="20270612T030000Z" data-loc="Masjid Agung Al-Azhar, Kebayoran Baru, Jakarta Selatan" data-desc="Akad Nikah Meyzsa Putri Ananda &amp; Ahmad Fahrezzi Pratama">UNDUH .ICS</button>
         </div>
-        <div class="card event rv rv-right">
+        <div class="card event rv rv-right"><span class="pc-stamp" aria-hidden="true"><img src="assets/undangya/paris-romansa/icon-eiffel.webp" alt=""></span><span class="pc-mark" aria-hidden="true">PARIS · 12 JUIN 2027 · FRANCE</span>
           <img class="sec-icon" src="assets/undangya/paris-romansa/icon-eiffel.webp" alt="" loading="lazy" decoding="async">
           <h3>Resepsi</h3>
           <div class="when">Sabtu, 12 Juni 2027 · 11.00 – 13.00 WIB</div>
@@ -518,19 +574,19 @@ body.opened #btnMusic{display:flex}
         <img class="sec-icon" src="assets/undangya/paris-romansa/icon-camera.webp" alt="" loading="lazy" decoding="async">
         <div class="sec-kicker">GALERI</div>
         <h2 class="sec-title serif">Jalan-Jalan di Paris</h2>
-        <p class="sec-sub">Sepuluh potret romansa kami — geser ke kanan &amp; kiri, ketuk untuk memperbesar</p>
+        <p class="sec-sub">Sepuluh kartu pos romansa kami di rak cartes postales — geser ke kanan &amp; kiri, ketuk untuk memperbesar</p>
       </div>
       <div class="gal-rail rv rv-zoom" id="galRail">
-        <figure class="gal-slide"><div class="arch"><img src="assets/undangya/paris-romansa/galeri-1.webp" alt="Pasangan berjalan di taman di bawah Menara Eiffel" loading="lazy" decoding="async"></div><figcaption class="gal-cap">Di Bawah Menara Eiffel</figcaption></figure>
-        <figure class="gal-slide frameless"><div class="arch"><img src="assets/undangya/paris-romansa/galeri-2.webp" alt="Pasangan di teras kafe Paris" loading="lazy" decoding="async"></div><figcaption class="gal-cap">Teras Kafe</figcaption></figure>
-        <figure class="gal-slide"><div class="arch"><img src="assets/undangya/paris-romansa/galeri-3.webp" alt="Pasangan di jembatan Seine memasang gembok cinta" loading="lazy" decoding="async"></div><figcaption class="gal-cap">Jembatan Seine</figcaption></figure>
-        <figure class="gal-slide frameless"><div class="arch"><img src="assets/undangya/paris-romansa/galeri-4.webp" alt="Pasangan di balkon besi tempa berbunga" loading="lazy" decoding="async"></div><figcaption class="gal-cap">Balkon Berbunga</figcaption></figure>
-        <figure class="gal-slide"><div class="arch"><img src="assets/undangya/paris-romansa/galeri-5.webp" alt="Pasangan berjalan di jalan batu berlentera" loading="lazy" decoding="async"></div><figcaption class="gal-cap">Jalan Batu &amp; Lentera</figcaption></figure>
-        <figure class="gal-slide frameless"><div class="arch"><img src="assets/undangya/paris-romansa/galeri-6.webp" alt="Pasangan berdansa di taman musim semi Paris" loading="lazy" decoding="async"></div><figcaption class="gal-cap">Taman Musim Semi</figcaption></figure>
-        <figure class="gal-slide"><div class="arch"><img src="assets/undangya/paris-romansa/galeri-7.webp" alt="Pasangan di tepi Seine saat senja dengan merpati" loading="lazy" decoding="async"></div><figcaption class="gal-cap">Senja di Seine</figcaption></figure>
-        <figure class="gal-slide frameless"><div class="arch"><img src="assets/undangya/paris-romansa/galeri-8.webp" alt="Pasangan di bawah payung kafe berbunga" loading="lazy" decoding="async"></div><figcaption class="gal-cap">Payung Kafe</figcaption></figure>
-        <figure class="gal-slide"><div class="arch"><img src="assets/undangya/paris-romansa/galeri-9.webp" alt="Pasangan berperahu di Sungai Seine" loading="lazy" decoding="async"></div><figcaption class="gal-cap">Perahu Seine</figcaption></figure>
-        <figure class="gal-slide frameless"><div class="arch"><img src="assets/undangya/paris-romansa/galeri-10.webp" alt="Pasangan di depan komidi putar vintage Paris" loading="lazy" decoding="async"></div><figcaption class="gal-cap">Komidi Putar</figcaption></figure>
+        <figure class="gal-slide"><img class="stamp-mini" src="assets/undangya/paris-romansa/decor-stamp.webp" alt="" loading="lazy" decoding="async"><span class="mark-mini" aria-hidden="true">PARIS 12·06·2027</span><div class="arch"><img src="assets/undangya/paris-romansa/galeri-1.webp" alt="Pasangan berjalan di taman di bawah Menara Eiffel" loading="lazy" decoding="async"></div><figcaption class="gal-cap">Di Bawah Menara Eiffel<span class="hand">Bonjour de Paris — M&amp;F</span></figcaption></figure>
+        <figure class="gal-slide frameless"><img class="stamp-mini" src="assets/undangya/paris-romansa/decor-stamp.webp" alt="" loading="lazy" decoding="async"><span class="mark-mini" aria-hidden="true">PARIS 12·06·2027</span><div class="arch"><img src="assets/undangya/paris-romansa/galeri-2.webp" alt="Pasangan di teras kafe Paris" loading="lazy" decoding="async"></div><figcaption class="gal-cap">Teras Kafe<span class="hand">Bonjour de Paris — M&amp;F</span></figcaption></figure>
+        <figure class="gal-slide wide"><img class="stamp-mini" src="assets/undangya/paris-romansa/decor-stamp.webp" alt="" loading="lazy" decoding="async"><span class="mark-mini" aria-hidden="true">PARIS 12·06·2027</span><div class="arch"><img src="assets/undangya/paris-romansa/galeri-3.webp" alt="Pasangan di jembatan Seine memasang gembok cinta" loading="lazy" decoding="async"></div><figcaption class="gal-cap">Jembatan Seine<span class="hand">Bonjour de Paris — M&amp;F</span></figcaption></figure>
+        <figure class="gal-slide frameless"><img class="stamp-mini" src="assets/undangya/paris-romansa/decor-stamp.webp" alt="" loading="lazy" decoding="async"><span class="mark-mini" aria-hidden="true">PARIS 12·06·2027</span><div class="arch"><img src="assets/undangya/paris-romansa/galeri-4.webp" alt="Pasangan di balkon besi tempa berbunga" loading="lazy" decoding="async"></div><figcaption class="gal-cap">Balkon Berbunga<span class="hand">Bonjour de Paris — M&amp;F</span></figcaption></figure>
+        <figure class="gal-slide"><img class="stamp-mini" src="assets/undangya/paris-romansa/decor-stamp.webp" alt="" loading="lazy" decoding="async"><span class="mark-mini" aria-hidden="true">PARIS 12·06·2027</span><div class="arch"><img src="assets/undangya/paris-romansa/galeri-5.webp" alt="Pasangan berjalan di jalan batu berlentera" loading="lazy" decoding="async"></div><figcaption class="gal-cap">Jalan Batu &amp; Lentera<span class="hand">Bonjour de Paris — M&amp;F</span></figcaption></figure>
+        <figure class="gal-slide frameless"><img class="stamp-mini" src="assets/undangya/paris-romansa/decor-stamp.webp" alt="" loading="lazy" decoding="async"><span class="mark-mini" aria-hidden="true">PARIS 12·06·2027</span><div class="arch"><img src="assets/undangya/paris-romansa/galeri-6.webp" alt="Pasangan berdansa di taman musim semi Paris" loading="lazy" decoding="async"></div><figcaption class="gal-cap">Taman Musim Semi<span class="hand">Bonjour de Paris — M&amp;F</span></figcaption></figure>
+        <figure class="gal-slide"><img class="stamp-mini" src="assets/undangya/paris-romansa/decor-stamp.webp" alt="" loading="lazy" decoding="async"><span class="mark-mini" aria-hidden="true">PARIS 12·06·2027</span><div class="arch"><img src="assets/undangya/paris-romansa/galeri-7.webp" alt="Pasangan di tepi Seine saat senja dengan merpati" loading="lazy" decoding="async"></div><figcaption class="gal-cap">Senja di Seine<span class="hand">Bonjour de Paris — M&amp;F</span></figcaption></figure>
+        <figure class="gal-slide frameless"><img class="stamp-mini" src="assets/undangya/paris-romansa/decor-stamp.webp" alt="" loading="lazy" decoding="async"><span class="mark-mini" aria-hidden="true">PARIS 12·06·2027</span><div class="arch"><img src="assets/undangya/paris-romansa/galeri-8.webp" alt="Pasangan di bawah payung kafe berbunga" loading="lazy" decoding="async"></div><figcaption class="gal-cap">Payung Kafe<span class="hand">Bonjour de Paris — M&amp;F</span></figcaption></figure>
+        <figure class="gal-slide wide"><img class="stamp-mini" src="assets/undangya/paris-romansa/decor-stamp.webp" alt="" loading="lazy" decoding="async"><span class="mark-mini" aria-hidden="true">PARIS 12·06·2027</span><div class="arch"><img src="assets/undangya/paris-romansa/galeri-9.webp" alt="Pasangan berperahu di Sungai Seine" loading="lazy" decoding="async"></div><figcaption class="gal-cap">Perahu Seine<span class="hand">Bonjour de Paris — M&amp;F</span></figcaption></figure>
+        <figure class="gal-slide frameless"><img class="stamp-mini" src="assets/undangya/paris-romansa/decor-stamp.webp" alt="" loading="lazy" decoding="async"><span class="mark-mini" aria-hidden="true">PARIS 12·06·2027</span><div class="arch"><img src="assets/undangya/paris-romansa/galeri-10.webp" alt="Pasangan di depan komidi putar vintage Paris" loading="lazy" decoding="async"></div><figcaption class="gal-cap">Komidi Putar<span class="hand">Bonjour de Paris — M&amp;F</span></figcaption></figure>
       </div>
       <div class="gal-nav rv rv-up">
         <button class="gal-arrow" id="galPrev" type="button" aria-label="Foto sebelumnya">‹</button>
@@ -543,6 +599,7 @@ body.opened #btnMusic{display:flex}
 
     <!-- ================= CUPLIKAN VIDEO ================= -->
     <section id="cuplikan">
+      <img class="decor-side" style="left:-16px;top:36px;width:92px;animation:stampBob 5.4s ease-in-out infinite alternate" src="assets/undangya/paris-romansa/decor-macaron.webp" alt="" loading="lazy" decoding="async">
       <div class="bg-tint">
         <div class="sec-head rv rv-up">
           <img class="sec-icon" src="assets/undangya/paris-romansa/icon-dove.webp" alt="" loading="lazy" decoding="async">
@@ -564,6 +621,11 @@ body.opened #btnMusic{display:flex}
 
     <!-- ================= LIVE STREAMING + TAGAR + GALERI TAMU ================= -->
     <section id="live">
+      <div class="sec-petals" aria-hidden="true">
+        <img class="leaf-drift" src="assets/undangya/paris-romansa/decor-plane-leaf.webp" alt="" style="width:26px;top:14%;--pd:21s;--pdl:-4s;--y25:20px;--y50:38px;--y75:56px;--ye:72px">
+        <img class="leaf-drift" src="assets/undangya/paris-romansa/decor-plane-leaf.webp" alt="" style="width:19px;top:46%;--pd:17s;--pdl:-10s;--y25:16px;--y50:30px;--y75:46px;--ye:60px">
+        <img class="leaf-drift" src="assets/undangya/paris-romansa/decor-plane-leaf.webp" alt="" style="width:23px;top:72%;--pd:24s;--pdl:-16s;--y25:22px;--y50:40px;--y75:58px;--ye:76px">
+      </div>
       <div class="bg-tint">
         <div class="sec-head rv rv-up">
           <img class="sec-icon" src="assets/undangya/paris-romansa/icon-lantern.webp" alt="" loading="lazy" decoding="async">
@@ -605,7 +667,7 @@ body.opened #btnMusic{display:flex}
           <h2 class="sec-title serif">Buku Tamu Kafe Seine</h2>
           <p class="sec-sub">Konfirmasi kehadiran &amp; tuliskan doa terbaik Anda</p>
         </div>
-        <div class="card rv rv-zoom">
+        <div class="card rv rv-zoom"><span class="pc-stamp" aria-hidden="true"><img src="assets/undangya/paris-romansa/icon-envelope.webp" alt=""></span><span class="pc-mark" aria-hidden="true">PARIS · 12 JUIN 2027 · FRANCE</span>
           <form id="rsvpForm" novalidate>
             <div class="field"><label for="rsvpName">Nama Tamu</label><input id="rsvpName" type="text" placeholder="Nama Anda" autocomplete="name"></div>
             <div class="field"><label for="rsvpAttend">Konfirmasi Kehadiran</label>
@@ -628,7 +690,7 @@ body.opened #btnMusic{display:flex}
           <h2 class="sec-title serif">Presensi Digital</h2>
           <p class="sec-sub">Pindai kode QR ini atau isi buku tamu saat tiba di lokasi</p>
         </div>
-        <div class="card rv rv-drop" style="text-align:center">
+        <div class="card rv rv-drop" style="text-align:center"><span class="pc-stamp" aria-hidden="true"><img src="assets/undangya/paris-romansa/icon-book.webp" alt=""></span><span class="pc-mark" aria-hidden="true">PARIS · 12 JUIN 2027 · FRANCE</span>
           <div class="qr-box"><img src="assets/undangya/paris-romansa/qr-undangan.webp" alt="Kode QR menuju halaman undangan ini" loading="lazy" decoding="async"></div>
           <p style="font-size:12.5px;line-height:1.65;color:#4c3a5e">Kode QR membuka halaman undangan yang sedang Anda baca — tunjukkan kepada penerima tamu saat check-in.</p>
           <form id="ciForm" novalidate style="text-align:left;margin-top:18px">
@@ -652,7 +714,7 @@ body.opened #btnMusic{display:flex}
         <h2 class="sec-title serif">Tanda Kasih</h2>
         <p class="sec-sub">Doa restu Anda adalah hadiah terindah. Bagi yang berkenan memberi tanda kasih:</p>
       </div>
-      <div class="card acc-card rv rv-left">
+      <div class="card acc-card rv rv-left"><span class="pc-stamp" aria-hidden="true"><img src="assets/undangya/paris-romansa/icon-gift.webp" alt=""></span><span class="pc-mark" aria-hidden="true">PARIS · 12 JUIN 2027 · FRANCE</span>
         <div class="bank">BCA</div>
         <div class="acc-num" id="accBca">1234567890</div>
         <div class="acc-name">a.n. Meyzsa Putri Ananda</div>
@@ -683,7 +745,7 @@ body.opened #btnMusic{display:flex}
           <p class="sec-sub">Segenap keluarga besar kedua mempelai</p>
         </div>
         <div class="turut-grid">
-          <div class="card turut-card rv rv-left">
+          <div class="card turut-card rv rv-left"><span class="pc-stamp" aria-hidden="true"><img src="assets/undangya/paris-romansa/icon-dove.webp" alt=""></span><span class="pc-mark" aria-hidden="true">PARIS · 12 JUIN 2027 · FRANCE</span>
             <h4>Keluarga Mempelai Wanita</h4>
             <p>Keluarga Besar Ridwan — Jakarta<br>Keluarga Besar Aminah — Bogor<br>Beserta segenap kerabat &amp; handai tolan</p>
           </div>
